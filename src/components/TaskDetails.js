@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const TaskTaskDetails = (props) => {
   const { Tasks, onDeleteTask, index } = props;
 
-  const { Title, Priority, id } = Tasks;
+  const { Title, Priority } = Tasks;
   const editURL = `/update/${index}`;
 
   return (
@@ -13,7 +13,6 @@ const TaskTaskDetails = (props) => {
         <div className="Task alert alert-primary p-3">
           <h3>Title : {Title}</h3>
           <h5>Priority : {Priority}</h5>
-          <p>ID : {id}</p>
           <div className="text-right">
             <Link to={editURL}>
               <button className="btn btn-success mr-2"> Update</button>
